@@ -6,10 +6,8 @@ namespace Rookies.core // Note: actual namespace depends on the project name.
     {
 
         static void Main(string[] args)
-        {
-
-            int n;
-
+        {   
+            int n;     
             List<Member> mb = new List<Member>();
 
             mb.Add(new Member
@@ -87,6 +85,7 @@ namespace Rookies.core // Note: actual namespace depends on the project name.
                     System.Console.WriteLine("Case 6 :List of members who has birth year less than 2000");
                     System.Console.WriteLine("Case 7 :Return the first person who was born in Ha Noi.");
                     System.Console.WriteLine("Enter option: ");
+                    
                     n = Convert.ToInt32(Console.ReadLine());
                     switch (n)
                     {
@@ -123,7 +122,8 @@ namespace Rookies.core // Note: actual namespace depends on the project name.
 
                             break;
                         case 3:
-                            var result3 = mb.Select(s => s.FirstName + " " + s.LastName).Aggregate((a, b) => a + ", " + b);
+                            var result3 = mb.Select(s => s.FirstName + " " + s.LastName)
+                            .Aggregate((a, b) => a + ", " + b);
 
                             foreach (var item in result3)
                             {
@@ -188,7 +188,7 @@ namespace Rookies.core // Note: actual namespace depends on the project name.
                 catch (Exception)
                 {
                     System.Console.WriteLine("Enter integer number please");
-                    
+
                     return;
                 }
             } while (n >= 0 && n <= 7);
