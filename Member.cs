@@ -18,14 +18,14 @@ namespace Rookies.core
             public uint Age { get; set; }
             public bool IsGraduated { get; set; }
 
-            public Member(string firstname, string lastname, string gender, DateTime dob, string phonenumer
-            , string birthplace, uint age, bool isgraduated)
+            public Member(string firstname, string lastname, string gender, DateTime dob,
+             string phonenumber, string birthplace, uint age, bool isgraduated)
             {
                 FirstName = firstname;
                 LastName = lastname;
                 Gender = gender;
                 DateOfBirth = dob;
-                PhoneNumber = phonenumer;
+                PhoneNumber = phonenumber;
                 BirthPlace = birthplace;
                 Age = age;
                 IsGraduated = isgraduated;
@@ -41,5 +41,7 @@ namespace Rookies.core
 
                 return $"Member's Information: FirstName: {FirstName} – LastName: {LastName} – Gender:{Gender} -Age: {Age} - Phone : {PhoneNumber} - Date of birth: {DateOfBirth} - Birth Place: {BirthPlace} - IsGraduated:{IsGraduated} ";
             }
+
+            
     }
     }
