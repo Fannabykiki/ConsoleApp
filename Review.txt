@@ -1,0 +1,5 @@
+Xoá những thứ kh dùng đến.
+trước dòng return phải là 1 dòng trắng.
+Sau If phải có dấu móc.
+Output phải rõ ràng
+Var trong foreach để tên Object
