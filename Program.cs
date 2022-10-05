@@ -6,8 +6,8 @@ namespace Rookies.core // Note: actual namespace depends on the project name.
     {
 
         static void Main(string[] args)
-        {   
-            int n;     
+        {
+            int n;
             List<Member> mb = new List<Member>();
 
             mb.Add(new Member
@@ -85,7 +85,7 @@ namespace Rookies.core // Note: actual namespace depends on the project name.
                     System.Console.WriteLine("Case 6 :List of members who has birth year less than 2000");
                     System.Console.WriteLine("Case 7 :Return the first person who was born in Ha Noi.");
                     System.Console.WriteLine("Enter option: ");
-                    
+
                     n = Convert.ToInt32(Console.ReadLine());
                     switch (n)
                     {
@@ -114,10 +114,13 @@ namespace Rookies.core // Note: actual namespace depends on the project name.
                             .Distinct()
                             .FirstOrDefault()
                             .ToString();
-
-                            foreach (var item in result2)
+                            if (result2 != null)
                             {
-                                Console.Write(item);
+                                foreach (var item in result2)
+                                {
+                                    Console.Write(item);
+                                }
+
                             }
 
                             break;
@@ -133,7 +136,7 @@ namespace Rookies.core // Note: actual namespace depends on the project name.
                             break;
                         case 4:
                             var result4 = (from m in mb
-                                           where m.DateOfBirth.Year.Equals(2000)
+                                           where ((uint)m.DateOfBirth.Year == 2000)
                                            select m).ToList();
 
                             foreach (var item in result4)
@@ -167,15 +170,17 @@ namespace Rookies.core // Note: actual namespace depends on the project name.
                             break;
                         case 7:
                             var result7 = (from m in mb
-                                           where m.BirthPlace.Contains("Ha Noi")
+                                           where m.BirthPlace.Equals("Ha Noi")
                                            select m).Distinct()
                                            .FirstOrDefault()
                                            .ToString();
-
-                            foreach (var item in result7)
+                            if (result7 != null)
                             {
-                                Console.Write(item);
+                                foreach (var item in result7)
+                                {
+                                    Console.Write(item);
 
+                                }
                             }
 
                             break;

@@ -8,15 +8,15 @@ namespace Rookies.core
     public class Member
     {
          
-            public string FirstName { get; set; }
-            public string LastName { get; set; }
-            public string Gender { get; set; }
+            public string? FirstName { get; set; }
+            public string? LastName { get; set; }
+            public string? Gender { get; set; }
             public DateTime DateOfBirth { get; set; }
-            public string PhoneNumber { get; set; }
-            public string BirthPlace { get; set; }
+            public string? PhoneNumber { get; set; }
+            public string? BirthPlace { get; set; }
 
-            public uint Age { get; set; }
-            public bool IsGraduated { get; set; }
+            public uint? Age { get; set; }
+            public bool? IsGraduated { get; set; }
 
             public Member(string firstname, string lastname, string gender, DateTime dob,
              string phonenumber, string birthplace, uint age, bool isgraduated)
